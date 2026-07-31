@@ -1,5 +1,5 @@
 [build]
-  publish = "dist" # Поменяйте на "build", если у вас Create React App
+  publish = "build" 
   command = "npm run build"
 
 [[redirects]]
