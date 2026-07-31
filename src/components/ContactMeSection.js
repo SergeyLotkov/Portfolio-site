@@ -31,7 +31,7 @@ const LandingSection = () => {
           },
           body: JSON.stringify({
             // Вставьте СВОЙ ключ, полученный на сайте Web3Forms
-            access_key: "ВАШ_ACCESS_KEY_ОТ_WEB3FORMS", 
+            access_key: "62b27d17-29e5-4e28-9bbc-d7005b26a185", 
             name: values.firstName,
             email: values.email,
             type: values.type,
