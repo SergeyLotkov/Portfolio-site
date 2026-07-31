@@ -8,7 +8,7 @@ import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import { useAlertContext } from "../context/alertContext";
 
-const LandingSection = () => {
+const ContactMeSection = () => {
   const [isLoading, setIsLoading] = React.useState(false);
   const { onOpen } = useAlertContext();
 
@@ -104,4 +104,4 @@ const LandingSection = () => {
   );
 };
 
-export default LandingSection;
+export default ContactMeSection;
