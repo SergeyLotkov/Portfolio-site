@@ -1,0 +1,8 @@
+[build]
+  publish = "dist" # Поменяйте на "build", если у вас Create React App
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
