@@ -22,22 +22,20 @@ const ContactMeSection = () => {
     onSubmit: async (values, { resetForm }) => {
       setIsLoading(true);
       
-      try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-          },
-          body: JSON.stringify({
-            // Вставьте СВОЙ ключ, полученный на сайте Web3Forms
-            access_key: "62b27d17-29e5-4e28-9bbc-d7005b26a185", 
-            name: values.firstName,
-            email: values.email,
-            type: values.type,
-            message: values.comment,
-          }),
-        });
+        try {
+          const response = await fetch("/.netlify/functions/send-telegram", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            // Отправляем данные так, как ожидает ваша функция
+            body: JSON.stringify({
+              name: values.firstName,
+              email: values.email,
+              type: values.type,
+              message: values.comment,
+            }),
+          });
 
         const result = await response.json();
 
