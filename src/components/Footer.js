@@ -1,23 +1,28 @@
 import React from "react";
-import {Box, Flex} from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <Box backgroundColor="#18181b">
+    <Box w="100%">
       <footer>
         <Flex
           margin="0 auto"
-          px={12}
+          px={{ base: 4, sm: 6, md: 12 }}
           color="white"
           justifyContent="center"
           alignItems="center"
           maxWidth="1024px"
-          height={16}
+          minHeight={{ base: "50px", md: "64px" }}
+          py={{ base: 3, md: 0 }}
+          textAlign="center"
         >
-          <p>Sergei • © 2026</p>
+          <Text fontSize={{ base: "xs", sm: "sm", md: "md" }}>
+            Sergei • © 2026
+          </Text>
         </Flex>
       </footer>
     </Box>
   );
 };
+
 export default Footer;
